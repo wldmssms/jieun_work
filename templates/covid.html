@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Highcharts Example</title>
+</head>
+<body>
+  <div id="container"></div>
+  <script src="https://code.highcharts.com/highcharts.src.js">  </script>
+  <p>
+For the USA, China, Germany, France, United Kingdom, and Korea, South
+      Includes Current Cases, Recoveries, and Deaths
+  </p>
+
+  <script>
+    Highcharts.chart('container', {
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'Per Capita COVID-19 Cases by Country'
+        },
+        xAxis: {
+            categories: ['2020-06-11', '2020-06-12', '2020-06-13', '2020-06-14']
+        },
+        series: [{
+            name: 'Korea, South',
+            data: [294111,366424,22949,2677705,335502]
+        }, {
+            name: 'Year 1900',
+            data: [295292,367544,23019,2711041,337250]
+        }, {
+            name: 'Year 2012',
+            data: [296078, 368030, 23080, 2746568, 338858]
+        }, {
+            name: 'Year 2012',
+            data: [296545,368408,23128,2771606,340408]
+        }]
+    });
+  </script>
+</body>
+</html>
